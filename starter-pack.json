@@ -1,0 +1,954 @@
+﻿{
+    "pack":  {
+                 "id":  "essentials-v1",
+                 "name":  "Prompt Essentials",
+                 "version":  "1.0.0",
+                 "description":  "25 versatile prompts for everyday tasks ??writing, productivity, marketing, and communication",
+                 "author":  "Lexicon Labs",
+                 "updated":  "2025-01-15",
+                 "promptCount":  25,
+                 "license":  ""
+             },
+    "prompts":  [
+                    {
+                        "id":  "ess-001",
+                        "title":  "Universal Rewriter",
+                        "description":  "Rewrite any text to improve clarity, flow, and impact while preserving the original meaning",
+                        "category":  "Writing",
+                        "tags":  [
+                                     "rewriting",
+                                     "editing",
+                                     "clarity"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Rewrite this text for clarity and engagement. Use active voice, remove jargon, improve flow.\n\nTone: {{tone}}\n\n{{text}}",
+                        "variables":  [
+                                          {
+                                              "name": "tone",
+                                              "description":  "Enter tone",
+                                              "example":  "professional / casual / formal / friendly"
+                                          },
+                                          {
+                                              "name": "text",
+                                              "description":  "Enter text",
+                                              "example":  "Paste your text here"
+                                          }
+                                      ],
+                        "tips":  "For best results, specify the intended audience along with the tone"
+                    },
+                    {
+                        "id":  "ess-002",
+                        "title":  "Tone Adjuster",
+                        "description":  "Transform text from one tone to another while keeping the core message intact",
+                        "category":  "Writing",
+                        "tags":  [
+                                     "tone",
+                                     "voice",
+                                     "adaptation"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Transform this text to {{target_tone}}. Adjust word choice, formality, and emotional register.\n\n{{text}}",
+                        "variables":  [
+                                          {
+                                              "name": "target_tone",
+                                              "description":  "Enter target tone",
+                                              "example":  "e.g., more casual, more authoritative, warmer, more urgent"
+                                          },
+                                          {
+                                              "name": "text",
+                                              "description":  "Enter text",
+                                              "example":  "Paste your text here"
+                                          }
+                                      ],
+                        "tips":  "Be specific about the target tone ??\u0027friendly but professional\u0027 works better than just \u0027better\u0027"
+                    },
+                    {
+                        "id":  "ess-003",
+                        "title":  "Summary Generator",
+                        "description":  "Create concise summaries at your specified length from any content",
+                        "category":  "Productivity",
+                        "tags":  [
+                                     "summary",
+                                     "condensing",
+                                     "key points"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Summarize in {{length}} as {{format}}. Cover: main argument, key points, conclusions.\n\n{{content}}",
+                        "variables":  [
+                                          {
+                                              "name": "length",
+                                              "description":  "Enter length",
+                                              "example":  "e.g., 2 sentences, 1 paragraph, 5 bullet points"
+                                          },
+                                          {
+                                              "name": "format",
+                                              "description":  "Enter format",
+                                              "example":  "paragraph / bullet points / numbered list"
+                                          },
+                                          {
+                                              "name": "content",
+                                              "description":  "Enter content",
+                                              "example":  "Paste the content to summarize"
+                                          }
+                                      ],
+                        "tips":  "For meeting notes, add \u0027include any action items\u0027 to the prompt"
+                    },
+                    {
+                        "id":  "ess-004",
+                        "title":  "Email Response Draft",
+                        "description":  "Generate professional email responses based on the context and your intended message",
+                        "category":  "Email",
+                        "tags":  [
+                                     "email",
+                                     "response",
+                                     "professional"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Write an email response. Tone: {{tone}}. Length: {{length}}.\n\nOriginal email:\n{{original_email}}\n\nMy key points:\n{{my_points}}\n\nStart from greeting. No subject line.",
+                        "variables":  [
+                                          {
+                                              "name": "original_email",
+                                              "description":  "Enter original email",
+                                              "example":  "Paste the email you\u0027re responding to"
+                                          },
+                                          {
+                                              "name": "my_points",
+                                              "description":  "Enter my points",
+                                              "example":  "What you want to say in your response"
+                                          },
+                                          {
+                                              "name": "tone",
+                                              "description":  "Enter tone",
+                                              "example":  "professional / friendly / apologetic / firm"
+                                          },
+                                          {
+                                              "name": "length",
+                                              "description":  "Enter length",
+                                              "example":  "brief (2-3 sentences) / standard / detailed"
+                                          }
+                                      ],
+                        "tips":  "Include any constraints like \u0027decline politely\u0027 or \u0027ask for more time\u0027"
+                    },
+                    {
+                        "id":  "ess-005",
+                        "title":  "Meeting Notes Cleanup",
+                        "description":  "Transform messy meeting notes into organized, actionable documentation",
+                        "category":  "Productivity",
+                        "tags":  [
+                                     "meetings",
+                                     "notes",
+                                     "organization"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Clean up these meeting notes.\n\nStructure: Overview (purpose + outcome) → Key Decisions → Discussion Points → Action Items (who/what/when) → Open Questions\n\n{{notes}}",
+                        "variables":  [
+                                          {
+                                              "name": "notes",
+                                              "description":  "Enter notes",
+                                              "example":  "Paste your rough meeting notes"
+                                          }
+                                      ],
+                        "tips":  "Include attendee names in your notes so action items can be properly assigned"
+                    },
+                    {
+                        "id":  "ess-006",
+                        "title":  "Social Post from Article",
+                        "description":  "Convert long-form content into engaging social media posts for any platform",
+                        "category":  "Social Media",
+                        "tags":  [
+                                     "social",
+                                     "repurposing",
+                                     "content"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Create 3 {{platform}} post variations from this content. Hook first line, match platform style, include CTA. {{hashtags}}\n\n{{content}}",
+                        "variables":  [
+                                          {
+                                              "name": "platform",
+                                              "description":  "Enter platform",
+                                              "example":  "Twitter/X / LinkedIn / Instagram / Facebook"
+                                          },
+                                          {
+                                              "name": "hashtags",
+                                              "description":  "Enter hashtags",
+                                              "example":  "Include 3-5 relevant hashtags / No hashtags"
+                                          },
+                                          {
+                                              "name": "content",
+                                              "description":  "Enter content",
+                                              "example":  "Paste the article or content to adapt"
+                                          }
+                                      ],
+                        "tips":  "For LinkedIn, request a more professional angle. For Twitter, emphasize brevity and punch."
+                    },
+                    {
+                        "id":  "ess-007",
+                        "title":  "Headline Generator",
+                        "description":  "Create multiple headline options using proven formulas that drive clicks",
+                        "category":  "Marketing",
+                        "tags":  [
+                                     "headlines",
+                                     "copywriting",
+                                     "hooks"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Generate 10 headlines for {{topic}}. Audience: {{audience}}. Aim for: {{emotion}}.\n\nUse varied formulas (how-to, listicle, contrarian, comparison). Rank top 3 with reasoning.",
+                        "variables":  [
+                                          {
+                                              "name": "topic",
+                                              "description":  "Enter topic",
+                                              "example":  "What the content is about"
+                                          },
+                                          {
+                                              "name": "audience",
+                                              "description":  "Enter audience",
+                                              "example":  "Who you\u0027re writing for"
+                                          },
+                                          {
+                                              "name": "emotion",
+                                              "description":  "Enter emotion",
+                                              "example":  "curiosity / urgency / excitement / relief"
+                                          }
+                                      ],
+                        "tips":  "Headlines with specific numbers tend to outperform vague ones"
+                    },
+                    {
+                        "id":  "ess-008",
+                        "title":  "Product Description",
+                        "description":  "Write compelling product descriptions that highlight benefits over features",
+                        "category":  "Marketing",
+                        "tags":  [
+                                     "product",
+                                     "ecommerce",
+                                     "copywriting"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Write a product description for {{product}}. Length: {{length}}. Tone: {{tone}}.\n\nFeatures: {{features}}\nCustomer: {{customer}}\nPrice point: {{price_point}}\n\nStructure: Hook (pain/desire) → What it is → Benefits → Social proof hint → CTA\n\nDo NOT list features; translate to customer outcomes.",
+                        "variables":  [
+                                          {
+                                              "name": "product",
+                                              "description":  "Enter product",
+                                              "example":  "Product name and what it is"
+                                          },
+                                          {
+                                              "name": "features",
+                                              "description":  "Enter features",
+                                              "example":  "List main features/specs"
+                                          },
+                                          {
+                                              "name": "customer",
+                                              "description":  "Enter customer",
+                                              "example":  "Who buys this and why"
+                                          },
+                                          {
+                                              "name": "price_point",
+                                              "description":  "Enter price point",
+                                              "example":  "budget / mid-range / premium / luxury"
+                                          },
+                                          {
+                                              "name": "tone",
+                                              "description":  "Enter tone",
+                                              "example":  "professional / playful / luxurious / practical"
+                                          },
+                                          {
+                                              "name": "length",
+                                              "description":  "Enter length",
+                                              "example":  "short (50 words) / medium (100 words) / long (200+ words)"
+                                          }
+                                      ],
+                        "tips":  "Include one specific detail or stat to add credibility"
+                    },
+                    {
+                        "id":  "ess-009",
+                        "title":  "Pros and Cons Analyzer",
+                        "description":  "Get a balanced analysis of any decision, idea, or option",
+                        "category":  "Decision Making",
+                        "tags":  [
+                                     "analysis",
+                                     "decisions",
+                                     "thinking"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Analyze pros and cons of: {{decision}}\n\nContext: {{context}}\n\nGive 5-7 pros (ranked by impact), 5-7 cons (ranked by severity), key considerations, and a 1-2 sentence bottom line. Consider short and long-term.",
+                        "variables":  [
+                                          {
+                                              "name": "decision",
+                                              "description":  "Enter decision",
+                                              "example":  "The decision, idea, or option to analyze"
+                                          },
+                                          {
+                                              "name": "context",
+                                              "description":  "Enter context",
+                                              "example":  "Relevant background, constraints, or goals"
+                                          }
+                                      ],
+                        "tips":  "Add your current leaning to get a more tailored analysis"
+                    },
+                    {
+                        "id":  "ess-010",
+                        "title":  "ELI5 Explainer",
+                        "description":  "Explain complex topics in simple terms anyone can understand",
+                        "category":  "Learning",
+                        "tags":  [
+                                     "explanation",
+                                     "simplify",
+                                     "teaching"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Explain {{topic}} for a {{audience}}. Use analogies, short sentences, concrete examples. Start with a one-sentence summary. Length: {{length}}.\n\nDo NOT use jargon without immediately defining it.",
+                        "variables":  [
+                                          {
+                                              "name": "topic",
+                                              "description":  "Enter topic",
+                                              "example":  "The concept to explain"
+                                          },
+                                          {
+                                              "name": "audience",
+                                              "description":  "Enter audience",
+                                              "example":  "10-year-old / complete beginner / smart friend outside the field"
+                                          },
+                                          {
+                                              "name": "length",
+                                              "description":  "Enter length",
+                                              "example":  "brief (1 paragraph) / standard (3-4 paragraphs) / detailed"
+                                          }
+                                      ],
+                        "tips":  "For technical topics, specify what background knowledge can be assumed"
+                    },
+                    {
+                        "id":  "ess-011",
+                        "title":  "Blog Post Outline",
+                        "description":  "Create structured outlines for blog posts that keep readers engaged",
+                        "category":  "Content",
+                        "tags":  [
+                                     "blog",
+                                     "outline",
+                                     "structure"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Create a blog post outline for: {{topic}}\n\nAudience: {{audience}} | Goal: {{goal}} | Length: {{word_count}} words\n\nInclude: Hook → H2/H3 sections with key points → Examples → Conclusion + CTA\n\nAlso provide: 3 title options, meta description (155 chars), 5 linking opportunities.",
+                        "variables":  [
+                                          {
+                                              "name": "topic",
+                                              "description":  "Enter topic",
+                                              "example":  "Blog post topic or title idea"
+                                          },
+                                          {
+                                              "name": "audience",
+                                              "description":  "Enter audience",
+                                              "example":  "Who will read this"
+                                          },
+                                          {
+                                              "name": "goal",
+                                              "description":  "Enter goal",
+                                              "example":  "educate / persuade / entertain / convert"
+                                          },
+                                          {
+                                              "name": "word_count",
+                                              "description":  "Enter word count",
+                                              "example":  "e.g., 1500, 2000, 3000"
+                                          }
+                                      ],
+                        "tips":  "Include any keywords that must be incorporated for SEO"
+                    },
+                    {
+                        "id":  "ess-012",
+                        "title":  "Cold Email Opener",
+                        "description":  "Write attention-grabbing first lines for cold outreach that get replies",
+                        "category":  "Sales",
+                        "tags":  [
+                                     "cold email",
+                                     "outreach",
+                                     "opening"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Write 5 cold email openers (under 20 words each) for {{recipient}}.\n\nReason: {{reason}}\nValue: {{value}}\nPain point: {{pain_point}}\n\nLead with relevance or insight. Explain why each works.\n\nDo NOT use \"I hope this finds you well\" or \"My name is...\"",
+                        "variables":  [
+                                          {
+                                              "name": "recipient",
+                                              "description":  "Enter recipient",
+                                              "example":  "Job title, industry, company type"
+                                          },
+                                          {
+                                              "name": "reason",
+                                              "description":  "Enter reason",
+                                              "example":  "Why you\u0027re reaching out to them specifically"
+                                          },
+                                          {
+                                              "name": "value",
+                                              "description":  "Enter value",
+                                              "example":  "What you\u0027re offering or proposing"
+                                          },
+                                          {
+                                              "name": "pain_point",
+                                              "description":  "Enter pain point",
+                                              "example":  "The problem they likely face"
+                                          }
+                                      ],
+                        "tips":  "Reference a recent trigger event (funding, new hire, product launch) for higher response rates"
+                    },
+                    {
+                        "id":  "ess-013",
+                        "title":  "Objection Handler",
+                        "description":  "Craft responses to common sales objections that move conversations forward",
+                        "category":  "Sales",
+                        "tags":  [
+                                     "objections",
+                                     "sales",
+                                     "persuasion"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "I'm selling {{product_service}}. Objection received: \"{{objection}}\"\n\nContext: {{context}}\n\nGive 3 responses: (1) Empathize + redirect, (2) Question to uncover real concern, (3) Proof-based. Each should be conversational, end with a question or next step.\n\nDo NOT sound defensive or scripted.",
+                        "variables":  [
+                                          {
+                                              "name": "product_service",
+                                              "description":  "Enter product service",
+                                              "example":  "What you\u0027re selling"
+                                          },
+                                          {
+                                              "name": "objection",
+                                              "description":  "Enter objection",
+                                              "example":  "The exact objection you received"
+                                          },
+                                          {
+                                              "name": "context",
+                                              "description":  "Enter context",
+                                              "example":  "Stage of conversation, prospect type, previous discussion"
+                                          }
+                                      ],
+                        "tips":  "Include your actual differentiators so responses can reference them"
+                    },
+                    {
+                        "id":  "ess-014",
+                        "title":  "FAQ Generator",
+                        "description":  "Create comprehensive FAQs based on your product, service, or content",
+                        "category":  "Content",
+                        "tags":  [
+                                     "FAQ",
+                                     "support",
+                                     "documentation"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Generate {{number}} FAQs for {{topic}}. Audience: {{audience}}.\n\nContext: {{context}}\n\nMix basic and advanced questions. Answers: 2-4 sentences, actionable. Cover: getting started, common problems, pricing/terms, best practices.",
+                        "variables":  [
+                                          {
+                                              "name": "number",
+                                              "description":  "Enter number",
+                                              "example":  "e.g., 10, 15, 20"
+                                          },
+                                          {
+                                              "name": "topic",
+                                              "description":  "Enter topic",
+                                              "example":  "Product, service, or subject"
+                                          },
+                                          {
+                                              "name": "context",
+                                              "description":  "Enter context",
+                                              "example":  "Key details, features, policies"
+                                          },
+                                          {
+                                              "name": "audience",
+                                              "description":  "Enter audience",
+                                              "example":  "Who will read these FAQs"
+                                          }
+                                      ],
+                        "tips":  "Review actual customer support tickets to inform the questions"
+                    },
+                    {
+                        "id":  "ess-015",
+                        "title":  "Feature to Benefit",
+                        "description":  "Transform product features into customer-focused benefits",
+                        "category":  "Marketing",
+                        "tags":  [
+                                     "benefits",
+                                     "features",
+                                     "copywriting"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Convert these features into customer benefits. Product: {{product}}. Customer: {{customer}}.\n\nFeatures:\n{{features}}\n\nFor each: benefit statement, emotional hook, punchy one-liner. Format as table.",
+                        "variables":  [
+                                          {
+                                              "name": "product",
+                                              "description":  "Enter product",
+                                              "example":  "Product or service name"
+                                          },
+                                          {
+                                              "name": "customer",
+                                              "description":  "Enter customer",
+                                              "example":  "Who buys this and their goals"
+                                          },
+                                          {
+                                              "name": "features",
+                                              "description":  "Enter features",
+                                              "example":  "List features, one per line"
+                                          }
+                                      ],
+                        "tips":  "Use the \u0027So what?\u0027 test ??keep asking \u0027so what?\u0027 until you hit an emotional benefit"
+                    },
+                    {
+                        "id":  "ess-016",
+                        "title":  "Call-to-Action Writer",
+                        "description":  "Generate high-converting CTAs for buttons, links, and marketing copy",
+                        "category":  "Marketing",
+                        "tags":  [
+                                     "CTA",
+                                     "conversion",
+                                     "buttons"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Write 10 CTAs for {{context}}. Max {{max_words}} words each.\n\nAction: {{action}} | Value: {{value}} | Tone: {{tone}}\n\nMix styles: action-focused, benefit-focused, urgency, curiosity. Rank top 3 with reasoning.",
+                        "variables":  [
+                                          {
+                                              "name": "context",
+                                              "description":  "Enter context",
+                                              "example":  "Where will this CTA appear (landing page, email, ad, etc.)"
+                                          },
+                                          {
+                                              "name": "action",
+                                              "description":  "Enter action",
+                                              "example":  "What should they do (sign up, buy, download, etc.)"
+                                          },
+                                          {
+                                              "name": "value",
+                                              "description":  "Enter value",
+                                              "example":  "What they get in return"
+                                          },
+                                          {
+                                              "name": "tone",
+                                              "description":  "Enter tone",
+                                              "example":  "professional / playful / urgent / friendly"
+                                          },
+                                          {
+                                              "name": "max_words",
+                                              "description":  "Enter max words",
+                                              "example":  "e.g., 4, 6, 8"
+                                          }
+                                      ],
+                        "tips":  "Test first-person (\u0027Get my guide\u0027) vs second-person (\u0027Get your guide\u0027) ??first-person often wins"
+                    },
+                    {
+                        "id":  "ess-017",
+                        "title":  "Task Breakdown",
+                        "description":  "Break complex projects into manageable, actionable tasks",
+                        "category":  "Productivity",
+                        "tags":  [
+                                     "planning",
+                                     "tasks",
+                                     "projects"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Break down this project into tasks.\n\nProject: {{project}}\nDeadline: {{deadline}}\nConstraints: {{constraints}}\n\nProvide: phases, tasks per phase with time estimates, dependencies, quick wins. Format as copyable checklist.",
+                        "variables":  [
+                                          {
+                                              "name": "project",
+                                              "description":  "Enter project",
+                                              "example":  "Project name and goal"
+                                          },
+                                          {
+                                              "name": "deadline",
+                                              "description":  "Enter deadline",
+                                              "example":  "When it needs to be done (or \u0027flexible\u0027)"
+                                          },
+                                          {
+                                              "name": "constraints",
+                                              "description":  "Enter constraints",
+                                              "example":  "Time available, budget, team size, tools, etc."
+                                          }
+                                      ],
+                        "tips":  "Include your energy levels ??mark tasks as \u0027high focus\u0027 or \u0027low energy\u0027 for better scheduling"
+                    },
+                    {
+                        "id":  "ess-018",
+                        "title":  "Interview Question Prep",
+                        "description":  "Generate likely interview questions and frameworks for answering them",
+                        "category":  "Career",
+                        "tags":  [
+                                     "interview",
+                                     "career",
+                                     "preparation"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Prepare me for an interview.\n\nRole: {{role}} | Company: {{company}}\nMy background: {{background}}\n\nGenerate 10 likely questions (behavioral, technical, situational mix). For each: why they ask, answer framework, key points, red flags. Also give 3 smart questions I should ask them.",
+                        "variables":  [
+                                          {
+                                              "name": "role",
+                                              "description":  "Enter role",
+                                              "example":  "Job title you\u0027re interviewing for"
+                                          },
+                                          {
+                                              "name": "company",
+                                              "description":  "Enter company",
+                                              "example":  "Company name and industry"
+                                          },
+                                          {
+                                              "name": "background",
+                                              "description":  "Enter background",
+                                              "example":  "Your relevant experience, skills, career stage"
+                                          }
+                                      ],
+                        "tips":  "Include the job description for more targeted questions"
+                    },
+                    {
+                        "id":  "ess-019",
+                        "title":  "Feedback Reframe",
+                        "description":  "Turn critical feedback into constructive, actionable communication",
+                        "category":  "Communication",
+                        "tags":  [
+                                     "feedback",
+                                     "communication",
+                                     "management"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Reframe this feedback to be constructive.\n\nFeedback: {{feedback}}\nRecipient: {{recipient}} | Relationship: {{relationship}}\nGoal: {{goal}}\n\nUse SBI framework (Situation-Behavior-Impact). Focus on future actions, collaborative tone. Provide: rewritten feedback, safe opening line, partnership closing.",
+                        "variables":  [
+                                          {
+                                              "name": "feedback",
+                                              "description":  "Enter feedback",
+                                              "example":  "The feedback you need to give (be specific)"
+                                          },
+                                          {
+                                              "name": "recipient",
+                                              "description":  "Enter recipient",
+                                              "example":  "Who will receive this (role, seniority)"
+                                          },
+                                          {
+                                              "name": "relationship",
+                                              "description":  "Enter relationship",
+                                              "example":  "direct report / peer / manager / client"
+                                          },
+                                          {
+                                              "name": "goal",
+                                              "description":  "Enter goal",
+                                              "example":  "What outcome do you want from this conversation"
+                                          }
+                                      ],
+                        "tips":  "Add context about past interactions to calibrate the tone"
+                    },
+                    {
+                        "id":  "ess-020",
+                        "title":  "Weekly Review Prompt",
+                        "description":  "Structured questions for meaningful weekly reflection and planning",
+                        "category":  "Productivity",
+                        "tags":  [
+                                     "review",
+                                     "reflection",
+                                     "planning"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Guide me through a weekly review.\n\nCompleted: {{completed}}\nIncomplete: {{incomplete}}\n\nHelp me reflect: 3 biggest wins, what took longer than expected, what I avoided, what I'd do differently, the ONE thing for next week's success.\n\nThen: prioritize next week, identify blockers, set one goal.",
+                        "variables":  [
+                                          {
+                                              "name": "completed",
+                                              "description":  "Enter completed",
+                                              "example":  "List what you accomplished"
+                                          },
+                                          {
+                                              "name": "incomplete",
+                                              "description":  "Enter incomplete",
+                                              "example":  "List what\u0027s still pending"
+                                          }
+                                      ],
+                        "tips":  "Do this at the same time each week to build the habit"
+                    },
+                    {
+                        "id":  "ess-021",
+                        "title":  "Content Repurposer",
+                        "description":  "Transform one piece of content into multiple formats for different platforms",
+                        "category":  "Content",
+                        "tags":  [
+                                     "repurposing",
+                                     "content",
+                                     "distribution"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Repurpose this content into:\n- Twitter thread (5-8 tweets, hook first)\n- LinkedIn post (150-200 words)\n- Email snippet (100 words)\n- Instagram carousel (5-7 slides, text)\n- YouTube intro (30-sec hook)\n\nAdapt tone to each platform. Lead with strongest point. Include CTA.\n\n{{content}}",
+                        "variables":  [
+                                          {
+                                              "name": "content",
+                                              "description":  "Enter content",
+                                              "example":  "Blog post, article, video transcript, or any long-form content"
+                                          }
+                                      ],
+                        "tips":  "Specify which platform is highest priority for you"
+                    },
+                    {
+                        "id":  "ess-022",
+                        "title":  "Subject Line Tester",
+                        "description":  "Generate and evaluate email subject lines for open rates",
+                        "category":  "Email",
+                        "tags":  [
+                                     "email",
+                                     "subject lines",
+                                     "open rates"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Generate 10 email subject lines for: {{email_topic}}\n\nAudience: {{audience}} | Goal: {{goal}} | {{emoji_preference}}\n\nMix: question, curiosity gap, benefit, urgency, personal (2 each). Max 50 chars. Rank top 3 with reasoning + A/B test pairs.\n\nDo NOT use spam trigger words.",
+                        "variables":  [
+                                          {
+                                              "name": "email_topic",
+                                              "description":  "Enter email topic",
+                                              "example":  "What the email is about"
+                                          },
+                                          {
+                                              "name": "audience",
+                                              "description":  "Enter audience",
+                                              "example":  "Who will receive this"
+                                          },
+                                          {
+                                              "name": "goal",
+                                              "description":  "Enter goal",
+                                              "example":  "open / click / reply / purchase"
+                                          },
+                                          {
+                                              "name": "emoji_preference",
+                                              "description":  "Enter emoji preference",
+                                              "example":  "No emojis / One emoji OK / Emoji encouraged"
+                                          }
+                                      ],
+                        "tips":  "Preview text (preheader) is equally important ??ask for those too"
+                    },
+                    {
+                        "id":  "ess-023",
+                        "title":  "Value Proposition",
+                        "description":  "Craft a clear value proposition that differentiates your offering",
+                        "category":  "Marketing",
+                        "tags":  [
+                                     "value prop",
+                                     "positioning",
+                                     "messaging"
+                                 ],
+                        "difficulty":  "intermediate",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Create a value proposition for {{product_service}}.\n\nCustomer: {{customer}} | Problem: {{problem}} | Solution: {{solution}}\nDifferentiator: {{differentiator}} | Competitors: {{competitors}}\n\nProvide: one-liner (<10 words), elevator pitch (75 words), full value prop (headline + 3 points + proof), \"only we\" statement.\n\nDo NOT use buzzwords or generic claims.",
+                        "variables":  [
+                                          {
+                                              "name": "product_service",
+                                              "description":  "Enter product service",
+                                              "example":  "What you\u0027re selling"
+                                          },
+                                          {
+                                              "name": "customer",
+                                              "description":  "Enter customer",
+                                              "example":  "Who it\u0027s for (be specific)"
+                                          },
+                                          {
+                                              "name": "problem",
+                                              "description":  "Enter problem",
+                                              "example":  "The pain point you address"
+                                          },
+                                          {
+                                              "name": "solution",
+                                              "description":  "Enter solution",
+                                              "example":  "How you solve it"
+                                          },
+                                          {
+                                              "name": "differentiator",
+                                              "description":  "Enter differentiator",
+                                              "example":  "What makes you different/better"
+                                          },
+                                          {
+                                              "name": "competitors",
+                                              "description":  "Enter competitors",
+                                              "example":  "Who else serves this market"
+                                          }
+                                      ],
+                        "tips":  "The best value props can be said by customers to explain why they chose you"
+                    },
+                    {
+                        "id":  "ess-024",
+                        "title":  "Daily Prioritizer",
+                        "description":  "Turn an overwhelming to-do list into a focused, prioritized action plan",
+                        "category":  "Productivity",
+                        "tags":  [
+                                     "prioritization",
+                                     "daily planning",
+                                     "focus"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Prioritize my day.\n\nTasks: {{tasks}}\nTime: {{time}} | Energy: {{energy}} | Main goal: {{goal}}\n\nIdentify: the ONE task that matters most, must-do vs should-do vs can-wait, optimal order based on energy, tasks to batch, what to drop or push back on.",
+                        "variables":  [
+                                          {
+                                              "name": "tasks",
+                                              "description":  "Enter tasks",
+                                              "example":  "List all your tasks, meetings, obligations"
+                                          },
+                                          {
+                                              "name": "time",
+                                              "description":  "Enter time",
+                                              "example":  "How many hours of actual work time you have"
+                                          },
+                                          {
+                                              "name": "energy",
+                                              "description":  "Enter energy",
+                                              "example":  "high / medium / low / exhausted"
+                                          },
+                                          {
+                                              "name": "goal",
+                                              "description":  "Enter goal",
+                                              "example":  "Your current biggest priority or project"
+                                          }
+                                      ],
+                        "tips":  "Include meetings so AI can factor in context switching and available blocks"
+                    },
+                    {
+                        "id":  "ess-025",
+                        "title":  "Quick Research Brief",
+                        "description":  "Get a structured overview of any topic with key points and further reading",
+                        "category":  "Research",
+                        "tags":  [
+                                     "research",
+                                     "overview",
+                                     "learning"
+                                 ],
+                        "difficulty":  "beginner",
+                        "aiTarget":  [
+                                         "chatgpt",
+                                         "claude",
+                                         "gemini"
+                                     ],
+                        "prompt":  "Research brief on: {{topic}}\n\nContext: {{context}} | Purpose: {{purpose}} | Depth: {{depth}}\n\nCover: TL;DR (3 sentences), 5-7 key concepts, current state, 2-3 perspectives/debates, common misconceptions, next steps.\n\nPrioritize accuracy over comprehensiveness.",
+                        "variables":  [
+                                          {
+                                              "name": "topic",
+                                              "description":  "Enter topic",
+                                              "example":  "Subject you want to learn about"
+                                          },
+                                          {
+                                              "name": "context",
+                                              "description":  "Enter context",
+                                              "example":  "Why you\u0027re researching this"
+                                          },
+                                          {
+                                              "name": "purpose",
+                                              "description":  "Enter purpose",
+                                              "example":  "e.g., writing an article, making a decision, learning a skill"
+                                          },
+                                          {
+                                              "name": "depth",
+                                              "description":  "Enter depth",
+                                              "example":  "surface level / working knowledge / expert understanding"
+                                          }
+                                      ],
+                        "tips":  "Specify what you already know to avoid redundant information"
+                    }
+                ]
+}
